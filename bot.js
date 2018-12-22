@@ -324,8 +324,8 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             .addField("?volume [Wert]", "Usage: `?volume` Description: To Changes the volume level to the specified value.", false)
             .addField("?pause", "Usage: `?pause` Description: To pause The Current Playing Song.", false)
             .addField("?resume", "Usage: `?resume` Description: To Resume The Paused Song.", false)
-            .addField("?mute", "Usage: `?mute` Description: To mute Bot.", false)
-            .addField("?unmute", "Usage: `?unmute` Description: To unmute Bot.", false)
+            .addField("?mutemusic", "Usage: `?mutemusic` Description: To mute Bot.", false)
+            .addField("?unmutemusic", "Usage: `?unmutemusic` Description: To unmute Bot.", false)
             .setColor([226, 50, 41])
             .setThumbnail(client.user.avatarURL)
             return msg.channel.sendEmbed(embedhelp);
