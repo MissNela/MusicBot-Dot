@@ -267,7 +267,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedresume2);
     }   
-    else if(msg.content.startsWith(`${PREFIX}mute`)){
+    else if(msg.content.startsWith(`${PREFIX}mutemusic`)){
         if(!serverQueue){
         var embedmute1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -289,7 +289,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         return msg.channel.sendEmbed(embedmute3);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}unmute`)){
+    else if(msg.content.startsWith(`${PREFIX}unmutemusic`)){
         if(!serverQueue){
             var embedunmute1 = new Discord.RichEmbed()
                 .setTitle(`**It does nothing at the moment!**`)
@@ -311,7 +311,7 @@ ${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
         return msg.channel.sendEmbed(embedunmute3);
         }
     }
-    else if(msg.content.startsWith(`${PREFIX}help`)){
+    else if(msg.content.startsWith(`${PREFIX}helpmusic`)){
         var embedhelp = new Discord.RichEmbed()
             .setTitle(`__**MultiverseMusic Commands**__`)
             .addField("?play [YouTube Link/Playlist]", "Usage: `?play` Description: To play See The YouTube Linke And playlist.", false)
