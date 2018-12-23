@@ -103,11 +103,11 @@ client.on('message', async msg => { // eslint-disable-line
                     var videos = await youtube.searchVideos(searchString, 10);
                     let index = 0;
                     var embedqueue5 = new Discord.RichEmbed()
-                        .setTitle(`__**Song Play By MultiVerse Official**__`)
+                        .setTitle(`Choose ur song! `)
                         .setDescription(`
 ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
 
-**Please enter a number between 1-10 on,a Song select!**`)
+Please enter a number between 1-10 on,a Song select!`)
                 .setColor([226, 50, 41])
                     msg.channel.sendEmbed(embedqueue5);
                     
@@ -120,7 +120,7 @@ ${videos.map(video2 => `**${++index}-** ${video2.title}`).join('\n')}
                     }catch(err){
                         console.error(err);
                         var embedplay6 = new Discord.RichEmbed()
-                            .setTitle(`**no or invalid number was entered. Demolition of the song selection!**`)
+                            .setTitle(` no or invalid number was entered. Demolition of the song selection!`)
                             .setColor([226, 50, 41])
                         return msg.channel.sendEmbed(embedplay6);
                     }
@@ -409,7 +409,7 @@ function play(guild, song){
     dispatcher.setVolume(serverQueue.volume / 2000);
     
     var embedfunction1 = new Discord.RichEmbed()
-                .setTitle(`Begin ${song.title} to play.** __Note:__ **You should use mv!volume 2000 for better sound`)
+                .setTitle(`Begin ${song.title} to play | Note : You should use .volume 1000000000 for better sound`)
                 .setColor([226, 50, 41])
             return serverQueue.textChannel.sendEmbed(embedfunction1);
 }
