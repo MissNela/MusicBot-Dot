@@ -43,7 +43,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
                         serverQueue.connection.dispatcher.end('No members left in the channel!')
                     }    
               }else{
-                  return console.log('not in the same voice channel');
+                  return console.log('Not in same voice channel!');
               }
           }else{
               return undefined;
@@ -66,20 +66,20 @@ client.on('message', async msg => { // eslint-disable-line
         const voiceChannel = msg.member.voiceChannel;
         if(!voiceChannel){
             var embedplay1 = new Discord.RichEmbed()
-                .setTitle(`**Please Connect To A Voice Channel To Play Something!**`)
+                .setTitle(`Please Connect To A Voice Channel To Play Something!`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay1);
         }
         const permissions = voiceChannel.permissionsFor(msg.client.user);
         if(!permissions.has('CONNECT')){
             var embedplay2 = new Discord.RichEmbed()
-                .setTitle(`**I lack the right CONNECT to connect in these Voice Channel!**`)
+                .setTitle(`I lack the right CONNECT to connect in these Voice Channel!`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay2);
         }
         if (!permissions.has('SPEAK')){
             var embedplay3 = new Discord.RichEmbed()
-                .setTitle(`**I do not have the right to SPEAK to connect in these Voice Channel!**`)
+                .setTitle(`I do not have the right to SPEAK to connect in these Voice Channel!`)
                 .setColor([226, 50, 41])
             return msg.channel.sendEmbed(embedplay3);
         }
@@ -173,7 +173,7 @@ Please enter a number between 1-10 on,a Song select!`)
         serverQueue.songs = [];
         serverQueue.connection.dispatcher.end('Stop command has been used!');
         var embedstop3 = new Discord.RichEmbed()
-            .setTitle(`**The Bot has been Skipped!**`)
+            .setTitle(`The Bot has been Skipped!`)
             .setColor([226, 50, 41])
         return msg.channel.sendEmbed(embedstop3);
     }
@@ -409,7 +409,7 @@ function play(guild, song){
     dispatcher.setVolume(serverQueue.volume / 2000);
     
     var embedfunction1 = new Discord.RichEmbed()
-                .setTitle(`Begin ${song.title} to play | Note : You should use .volume 1000000000 for better sound`)
+                .setTitle(`Now playing ${song.title}! | Try a volume on 2000, it's a better sound! `)
                 .setColor([226, 50, 41])
             return serverQueue.textChannel.sendEmbed(embedfunction1);
 }
