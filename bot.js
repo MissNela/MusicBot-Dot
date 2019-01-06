@@ -54,7 +54,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   }
 })
 
-client.on('message', function(message)) {
+client.on('message', function(message) {
   if (message.author.equals(bot.user)) return;
   
   if (!message.startwith(PREFIX)) return;
@@ -68,7 +68,7 @@ client.on('message', function(message)) {
       default:
           message.channel.sendMessage("Invaild command! Try using M]help!")
   }
-}};
+});
 
 client.on('message', async msg => { // eslint-disable-line
     if (msg.author.bot) return undefined;
