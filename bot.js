@@ -54,7 +54,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   }
 })
 
-client.on('message', function(message) {
+client.on('message', function(message)) {
   if (message.author.equals(bot.user)) return;
   
   if (!message.startwith(PREFIX)) return;
