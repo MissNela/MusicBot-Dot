@@ -61,7 +61,7 @@ client.on('message', function(message) {
   
   var args = message.content.substring(PREFIX.elngth).split(" ");
   
-  switch (args[0]).toLoverCase()) {
+  switch (args[0].toLowerCase()) {
       case "ping":
           message.channel.sendMessage("Pong! :ping_pong:");
           break;
