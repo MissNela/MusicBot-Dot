@@ -54,6 +54,22 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   }
 })
 
+client.on('message', function(message) {
+  if (message.author.equals(bot.user)) return;
+  
+  if (!message.startwith(PREFIX)) return;
+  
+  var args = message.content.substring(PREFIX.elngth).split(" ");
+  
+  switch (args[0]).toLoverCase()) {
+      case "ping":
+          message.channel.sendMessage("Pong! :ping_pong:");
+          break;
+      default:
+          message.channel.sendMessage("Invaild command! Try using M]help!")
+  }
+}};
+
 client.on('message', async msg => { // eslint-disable-line
     if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(PREFIX)) return undefined;
